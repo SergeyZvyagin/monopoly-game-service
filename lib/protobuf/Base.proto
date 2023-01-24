@@ -1,0 +1,37 @@
+syntax = "proto3";
+
+enum MapType {
+	SQUARE = 0;
+	SNAIL = 1;
+}
+
+enum CellType {
+	START = 0;
+	VOID = 1;
+	FOREST = 2;
+	COALFIELD = 3;
+	URANIUMFIELD = 4;
+	SAWMILL = 5;
+	POWERPLANT = 6;
+	URANIUMPLANT = 7;
+	SABOTAGE = 8;
+	VACATION = 9;
+	CROSSROAD = 10;
+}
+
+message Cell {
+	int32 order = 1;
+	CellType type = 2;
+	int32 position_x = 3;
+	int32 position_y = 4;
+	int32 cost = 5;
+	int32 income = 6;
+	optional Player owner = 7;
+}
+
+message Player {
+	int32 order = 1;
+	string name = 2;
+	int32 balance = 3;
+}
+

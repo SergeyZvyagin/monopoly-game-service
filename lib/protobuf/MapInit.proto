@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+import "Base.proto"
+
+message MapInit {
+	int32 moveOrder = 1;
+	int32 age = 5;
+	int32 turn = 6;
+	MapType type = 2;
+	repeated Cell map = 3;
+	repeated Player players= 7;
+}
+
